@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceRadar.Application\ServiceRadar.Application.csproj" />
+  </ItemGroup>
+
 </Project>

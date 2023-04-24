@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceRadar.Application\ServiceRadar.Application.csproj" />
+    <ProjectReference Include="..\ServiceRadar.Infrastructure\ServiceRadar.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
