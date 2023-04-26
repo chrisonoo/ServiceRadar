@@ -1,4 +1,5 @@
 using ServiceRadar.Infrastructure.Extensions;
+using ServiceRadar.Infrastructure.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
+
+// activate Seeder
+var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<ServiceRadarSeeder>();
+await seeder.Seed();
 
 // Configure the HTTP request pipeline.
 if(!app.Environment.IsDevelopment())
