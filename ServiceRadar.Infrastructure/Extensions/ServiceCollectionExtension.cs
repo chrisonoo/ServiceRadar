@@ -24,8 +24,5 @@ public static class ServiceCollectionExtension
         // register connection to database
         services.AddDbContext<ServiceRadarDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("ServiceRadar")));
-
-        // register Seeder
-        services.AddScoped<ServiceRadarSeeder>();
     }
 }

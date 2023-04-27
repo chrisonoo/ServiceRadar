@@ -9,10 +9,13 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
-// activate Seeder
-var scope = app.Services.CreateScope();
-var seeder = scope.ServiceProvider.GetRequiredService<ServiceRadarSeeder>();
-await seeder.Seed();
+// run the seed initializer
+using(var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    ServiceRadarSeeder.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if(!app.Environment.IsDevelopment())
