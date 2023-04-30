@@ -9,7 +9,7 @@ public class WorkshopDto
     [Required(ErrorMessage = "Field is required")]
     public string? Description { get; set; }
     public string? About { get; set; }
-    [StringLength(12, MinimumLength = 8, ErrorMessage = "Length: min. 8, max. 12")]
+    [StringLength(16, MinimumLength = 8, ErrorMessage = "Length: min. 8, max. 16")]
     public string? PhoneNumber { get; set; }
     public string? Street { get; set; }
     public string? City { get; set; }
