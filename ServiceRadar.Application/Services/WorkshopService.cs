@@ -7,12 +7,12 @@ using ServiceRadar.Domain.Interfaces;
 namespace ServiceRadar.Application.Services;
 public class WorkshopService : IWorkshopService
 {
-    private readonly IServiceRadarRepository _workshopRepository;
+    private readonly IServiceRadarRepository _serviceRadarRepository;
     private readonly IMapper _mapper;
 
-    public WorkshopService(IServiceRadarRepository workshopRepository, IMapper mapper)
+    public WorkshopService(IServiceRadarRepository serviceRadarRepository, IMapper mapper)
     {
-        _workshopRepository = workshopRepository;
+        _serviceRadarRepository = serviceRadarRepository;
         _mapper = mapper;
     }
 
@@ -21,6 +21,6 @@ public class WorkshopService : IWorkshopService
         var workshop = _mapper.Map<Workshop>(workshopDto);
         workshop.EncodeName();
 
-        await _workshopRepository.Create(workshop);
+        await _serviceRadarRepository.Create(workshop);
     }
 }

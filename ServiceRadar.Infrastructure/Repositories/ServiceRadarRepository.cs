@@ -1,4 +1,6 @@
-﻿using ServiceRadar.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+
+using ServiceRadar.Domain.Entities;
 using ServiceRadar.Domain.Interfaces;
 using ServiceRadar.Infrastructure.Data;
 
@@ -17,4 +19,7 @@ public class ServiceRadarRepository : IServiceRadarRepository
         _dbContext.Add(workshop);
         await _dbContext.SaveChangesAsync();
     }
+
+    public Task<Workshop?> GetByName(string name)
+        => _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
 }

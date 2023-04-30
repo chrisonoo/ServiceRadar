@@ -1,7 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+
+using Microsoft.Extensions.DependencyInjection;
 
 using ServiceRadar.Application.Mappings;
 using ServiceRadar.Application.Services;
+using ServiceRadar.Application.Validators.Dtos;
 
 namespace ServiceRadar.Application.Extensions;
 public static class ServiceCollectionExtensions
@@ -13,5 +17,10 @@ public static class ServiceCollectionExtensions
 
         // Register all AutoMapper mapping profile in DI
         services.AddAutoMapper(typeof(WorkshopMappingProfile));
+
+        // Register all validation class in DI
+        services.AddValidatorsFromAssemblyContaining<WorkshopDtoValidator>()
+            .AddFluentValidationAutoValidation()
+            .AddFluentValidationClientsideAdapters();
     }
 }
