@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-using ServiceRadar.Domain.Entities;
 using ServiceRadar.Infrastructure.Data;
 
 namespace ServiceRadar.Infrastructure.Seeders;

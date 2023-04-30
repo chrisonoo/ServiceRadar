@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceRadar.Application.Dtos;
+﻿namespace ServiceRadar.Application.Dtos;
 public class WorkshopDto
 {
     public string Name { get; set; } = default!;

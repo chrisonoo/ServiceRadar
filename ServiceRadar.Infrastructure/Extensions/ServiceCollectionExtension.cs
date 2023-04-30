@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using ServiceRadar.Domain.Interfaces;
 using ServiceRadar.Infrastructure.Data;
 using ServiceRadar.Infrastructure.Repositories;
-using ServiceRadar.Infrastructure.Seeders;
 
 namespace ServiceRadar.Infrastructure.Extensions;
 public static class ServiceCollectionExtension
