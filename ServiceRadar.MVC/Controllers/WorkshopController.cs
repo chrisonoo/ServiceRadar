@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using ServiceRadar.Application.Dtos;
 using ServiceRadar.Application.Services;
-using ServiceRadar.Domain.Entities;
 
 namespace ServiceRadar.MVC.Controllers;
 public class WorkshopController : Controller
@@ -19,9 +19,9 @@ public class WorkshopController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(Workshop workshop)
+    public async Task<IActionResult> Create(WorkshopDto workshopDto)
     {
-        await _workshopService.Create(workshop);
-        return RedirectToAction(nameof(Create)); // TODO: refactor
+        await _workshopService.Create(workshopDto);
+        return RedirectToAction(nameof(Create));
     }
 }
