@@ -23,7 +23,7 @@ public class WorkshopController : Controller
     {
         if(!ModelState.IsValid)
         {
-            return View();
+            return View(workshopDto);
         }
         await _workshopService.Create(workshopDto);
         return RedirectToAction(nameof(Create));
