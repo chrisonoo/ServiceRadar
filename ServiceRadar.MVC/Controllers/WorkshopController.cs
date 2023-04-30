@@ -13,6 +13,11 @@ public class WorkshopController : Controller
         _workshopService = workshopService;
     }
 
+    public IActionResult Create()
+    {
+        return View();
+    }
+
     [HttpPost]
     public async Task<IActionResult> Create(Workshop workshop)
     {
