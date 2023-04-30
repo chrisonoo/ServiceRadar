@@ -10,10 +10,13 @@
             <div class="form-group mb-3">
                 <label class="control-label" asp-for="Name">Name</label>
                 <input class="form-control" type="text" asp-for="Name" />
+                <span class="text-danger small" asp-validation-for="Name"></span>
             </div>
             <div class="form-group mb-3">
                 <label class="control-label" asp-for="Description">Description</label>
                 <input class="form-control" type="text" asp-for="Description" />
+                <span class="text-danger small" asp-validation-for="Description"></span>
+
             </div>
             <div class="form-group mb-3">
                 <label class="control-label" asp-for="About">About</label>
@@ -22,6 +25,8 @@
             <div class="form-group mb-3">
                 <label class="control-label" asp-for="PhoneNumber">Phone Number</label>
                 <input class="form-control" type="text" asp-for="PhoneNumber" />
+                <span class="text-danger small" asp-validation-for="PhoneNumber"></span>
+
             </div>
             <div class="form-group mb-3">
                 <label class="control-label" asp-for="Street">Street</label>
