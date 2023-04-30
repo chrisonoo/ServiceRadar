@@ -21,6 +21,10 @@ public class WorkshopController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(WorkshopDto workshopDto)
     {
+        if(!ModelState.IsValid)
+        {
+            return View();
+        }
         await _workshopService.Create(workshopDto);
         return RedirectToAction(nameof(Create));
     }
