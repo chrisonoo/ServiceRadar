@@ -5,4 +5,5 @@ public interface IServiceRadarRepository
 {
     Task Create(Workshop workshop);
     Task<Workshop?> GetByName(string name);
+    Task<IEnumerable<Workshop>> GetAll();
 }

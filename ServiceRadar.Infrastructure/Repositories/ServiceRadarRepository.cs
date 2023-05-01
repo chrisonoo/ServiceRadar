@@ -20,6 +20,10 @@ public class ServiceRadarRepository : IServiceRadarRepository
         await _dbContext.SaveChangesAsync();
     }
 
+    public async Task<IEnumerable<Workshop>> GetAll()
+        => await _dbContext.Workshops.ToListAsync();
+
+    // TODO: Should I move this implementation to Workshop Service?
     public Task<Workshop?> GetByName(string name)
         => _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
 }

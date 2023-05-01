@@ -13,6 +13,12 @@ public class WorkshopController : Controller
         _workshopService = workshopService;
     }
 
+    public async Task<IActionResult> Index()
+    {
+        var workshops = await _workshopService.GetAll();
+        return View(workshops);
+    }
+
     public IActionResult Create()
     {
         return View();

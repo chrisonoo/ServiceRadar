@@ -16,5 +16,11 @@ public class WorkshopMappingProfile : Profile
                 PostalCode = src.PostalCode,
                 Street = src.Street,
             }));
+
+        CreateMap<Workshop, WorkshopDto>()
+            .ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber))
+            .ForMember(dto => dto.Street, opt => opt.MapFrom(src => src.ContactDetails.Street))
+            .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City))
+            .ForMember(dto => dto.PostalCode, opt => opt.MapFrom(src => src.ContactDetails.PostalCode));
     }
 }
