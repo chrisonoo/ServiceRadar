@@ -32,6 +32,6 @@ public class WorkshopController : Controller
             return View(workshopDto);
         }
         await _workshopService.Create(workshopDto);
-        return RedirectToAction(nameof(Create));
+        return RedirectToAction(nameof(Index));
     }
 }
