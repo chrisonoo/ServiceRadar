@@ -23,7 +23,6 @@ public class ServiceRadarRepository : IServiceRadarRepository
     public async Task<IEnumerable<Workshop>> GetAll()
         => await _dbContext.Workshops.ToListAsync();
 
-    // TODO: Should I move this implementation to Workshop Service?
-    public Task<Workshop?> GetByName(string name)
-        => _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
+    public async Task<Workshop?> GetByName(string name)
+        => await _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
 }

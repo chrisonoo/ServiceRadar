@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
 
 using ServiceRadar.Application.Dtos;
-using ServiceRadar.Domain.Interfaces;
+using ServiceRadar.Application.Services;
 
 namespace ServiceRadar.Application.Validators.Dtos;
 public class WorkshopDtoValidator : AbstractValidator<WorkshopDto>
 {
-    public WorkshopDtoValidator(IServiceRadarRepository serviceRadarRepository)
+    public WorkshopDtoValidator(IWorkshopService workshopService)
     {
         RuleFor(c => c.Name)
             .NotEmpty().WithMessage("Field is required")
@@ -14,8 +14,8 @@ public class WorkshopDtoValidator : AbstractValidator<WorkshopDto>
             .MaximumLength(20).WithMessage("Maximum length: 20")
             .Custom((value, context) =>
             {
-                var existingWorkshop = serviceRadarRepository.GetByName(value).Result;
-                if(existingWorkshop != null)
+                var existingWorkshopDto = workshopService.GetByName(value).Result;
+                if(existingWorkshopDto != null)
                 {
                     context.AddFailure($"{value} is not unique name for workshop");
                 }

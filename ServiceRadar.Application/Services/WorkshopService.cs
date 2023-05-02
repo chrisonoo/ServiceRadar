@@ -27,8 +27,16 @@ public class WorkshopService : IWorkshopService
     public async Task<IEnumerable<WorkshopDto>> GetAll()
     {
         var workshops = await _serviceRadarRepository.GetAll();
-        var dtos = _mapper.Map<IEnumerable<WorkshopDto>>(workshops);
+        var workshopDtos = _mapper.Map<IEnumerable<WorkshopDto>>(workshops);
 
-        return dtos;
+        return workshopDtos;
+    }
+
+    public async Task<WorkshopDto?> GetByName(string name)
+    {
+        var workshop = await _serviceRadarRepository.GetByName(name);
+        var workshopDto = _mapper.Map<WorkshopDto>(workshop);
+
+        return workshopDto;
     }
 }
