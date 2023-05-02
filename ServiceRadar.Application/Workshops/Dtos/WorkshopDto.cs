@@ -1,4 +1,4 @@
-﻿namespace ServiceRadar.Application.Dtos;
+﻿namespace ServiceRadar.Application.Workshops.Dtos;
 public class WorkshopDto
 {
     public string Name { get; set; } = default!;

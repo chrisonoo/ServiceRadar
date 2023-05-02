@@ -1,21 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
 
-using ServiceRadar.Application.Dtos;
+using Microsoft.AspNetCore.Mvc;
+
 using ServiceRadar.Application.Services;
+using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
+using ServiceRadar.Application.Workshops.Dtos;
+using ServiceRadar.Application.Workshops.Queries.GetAllWorkshops;
 
 namespace ServiceRadar.MVC.Controllers;
 public class WorkshopController : Controller
 {
     private readonly IWorkshopService _workshopService;
+    private readonly IMediator _mediator;
 
-    public WorkshopController(IWorkshopService workshopService)
+    public WorkshopController(IWorkshopService workshopService, IMediator mediator)
     {
         _workshopService = workshopService;
+        _mediator = mediator;
     }
 
     public async Task<IActionResult> Index()
     {
-        var workshops = await _workshopService.GetAll();
+        var workshops = await _mediator.Send(new GetAllWorkshopsQuery());
         return View(workshops);
     }
 
@@ -25,13 +31,13 @@ public class WorkshopController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(WorkshopDto workshopDto)
+    public async Task<IActionResult> Create(CreateWorkshopCommand command)
     {
         if(!ModelState.IsValid)
         {
-            return View(workshopDto);
+            return View(command);
         }
-        await _workshopService.Create(workshopDto);
+        await _mediator.Send(command);
         return RedirectToAction(nameof(Index));
     }
 }

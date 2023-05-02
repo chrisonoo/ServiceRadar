@@ -1,4 +1,4 @@
-using ServiceRadar.Application.Extensions;
+using ServiceRadar.Application.Common.Extensions;
 using ServiceRadar.Infrastructure.Extensions;
 using ServiceRadar.Infrastructure.Seeders;
 

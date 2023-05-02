@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 
-using ServiceRadar.Application.Dtos;
+using ServiceRadar.Application.Workshops.Dtos;
 using ServiceRadar.Domain.Entities;
 
-namespace ServiceRadar.Application.Mappings;
+namespace ServiceRadar.Application.Workshops.Mappings;
 public class WorkshopMappingProfile : Profile
 {
     public WorkshopMappingProfile()

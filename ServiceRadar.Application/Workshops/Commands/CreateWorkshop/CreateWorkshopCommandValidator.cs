@@ -1,12 +1,13 @@
 ﻿using FluentValidation;
 
-using ServiceRadar.Application.Dtos;
 using ServiceRadar.Application.Services;
+using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
+using ServiceRadar.Application.Workshops.Dtos;
 
 namespace ServiceRadar.Application.Validators.Dtos;
-public class WorkshopDtoValidator : AbstractValidator<WorkshopDto>
+public class CreateWorkshopCommandValidator : AbstractValidator<CreateWorkshopCommand>
 {
-    public WorkshopDtoValidator(IWorkshopService workshopService)
+    public CreateWorkshopCommandValidator(IWorkshopService workshopService)
     {
         RuleFor(c => c.Name)
             .NotEmpty().WithMessage("Field is required")

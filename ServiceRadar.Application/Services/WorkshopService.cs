@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 
-using ServiceRadar.Application.Dtos;
-using ServiceRadar.Domain.Entities;
+using ServiceRadar.Application.Workshops.Dtos;
 using ServiceRadar.Domain.Interfaces;
 
 namespace ServiceRadar.Application.Services;
@@ -16,22 +15,7 @@ public class WorkshopService : IWorkshopService
         _mapper = mapper;
     }
 
-    public async Task Create(WorkshopDto workshopDto)
-    {
-        var workshop = _mapper.Map<Workshop>(workshopDto);
-        workshop.EncodeName();
-
-        await _serviceRadarRepository.Create(workshop);
-    }
-
-    public async Task<IEnumerable<WorkshopDto>> GetAll()
-    {
-        var workshops = await _serviceRadarRepository.GetAll();
-        var workshopDtos = _mapper.Map<IEnumerable<WorkshopDto>>(workshops);
-
-        return workshopDtos;
-    }
-
+    // TODO: move to MediatR
     public async Task<WorkshopDto?> GetByName(string name)
     {
         var workshop = await _serviceRadarRepository.GetByName(name);
