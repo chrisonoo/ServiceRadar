@@ -2,20 +2,16 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-using ServiceRadar.Application.Services;
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
-using ServiceRadar.Application.Workshops.Dtos;
 using ServiceRadar.Application.Workshops.Queries.GetAllWorkshops;
 
 namespace ServiceRadar.MVC.Controllers;
 public class WorkshopController : Controller
 {
-    private readonly IWorkshopService _workshopService;
     private readonly IMediator _mediator;
 
-    public WorkshopController(IWorkshopService workshopService, IMediator mediator)
+    public WorkshopController(IMediator mediator)
     {
-        _workshopService = workshopService;
         _mediator = mediator;
     }
 

@@ -1,13 +1,14 @@
 ﻿using FluentValidation;
 
-using ServiceRadar.Application.Services;
+using MediatR;
+
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
-using ServiceRadar.Application.Workshops.Dtos;
+using ServiceRadar.Application.Workshops.Queries.GetByName;
 
 namespace ServiceRadar.Application.Validators.Dtos;
 public class CreateWorkshopCommandValidator : AbstractValidator<CreateWorkshopCommand>
 {
-    public CreateWorkshopCommandValidator(IWorkshopService workshopService)
+    public CreateWorkshopCommandValidator(IMediator mediator)
     {
         RuleFor(c => c.Name)
             .NotEmpty().WithMessage("Field is required")
@@ -15,7 +16,7 @@ public class CreateWorkshopCommandValidator : AbstractValidator<CreateWorkshopCo
             .MaximumLength(20).WithMessage("Maximum length: 20")
             .Custom((value, context) =>
             {
-                var existingWorkshopDto = workshopService.GetByName(value).Result;
+                var existingWorkshopDto = mediator.Send(new GetByNameQuery(value)).Result;
                 if(existingWorkshopDto != null)
                 {
                     context.AddFailure($"{value} is not unique name for workshop");
