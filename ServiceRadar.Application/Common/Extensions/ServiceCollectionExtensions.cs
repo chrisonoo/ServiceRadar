@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 
-using MediatR;
-
 using Microsoft.Extensions.DependencyInjection;
 
 using ServiceRadar.Application.Validators.Dtos;
@@ -15,7 +13,7 @@ public static class ServiceCollectionExtensions
     public static void AddApplication(this IServiceCollection services)
     {
         // Register MediatR service
-        services.AddMediatR(typeof(CreateWorkshopCommand));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining(typeof(CreateWorkshopCommand)));
 
         // Register all AutoMapper mapping profile in DI
         services.AddAutoMapper(typeof(WorkshopMappingProfile));

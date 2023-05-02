@@ -17,13 +17,13 @@ public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopComman
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(CreateWorkshopCommand request, CancellationToken cancellationToken)
+    public async Task Handle(CreateWorkshopCommand request, CancellationToken cancellationToken)
     {
         var workshop = _mapper.Map<Workshop>(request);
         workshop.EncodeName();
 
         await _serviceRadarRepository.Create(workshop);
 
-        return Unit.Value;
+        return;
     }
 }
