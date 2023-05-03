@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 
+using ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 using ServiceRadar.Application.Workshops.Dtos;
 using ServiceRadar.Domain.Entities;
 
@@ -22,5 +23,7 @@ public class WorkshopMappingProfile : Profile
             .ForMember(dto => dto.Street, opt => opt.MapFrom(src => src.ContactDetails.Street))
             .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City))
             .ForMember(dto => dto.PostalCode, opt => opt.MapFrom(src => src.ContactDetails.PostalCode));
+
+        CreateMap<WorkshopDto, EditWorkshopCommand>();
     }
 }

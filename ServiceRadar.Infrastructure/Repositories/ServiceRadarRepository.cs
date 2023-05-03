@@ -27,4 +27,7 @@ public class ServiceRadarRepository : IServiceRadarRepository
 
     public async Task<Workshop?> GetWorkshopByName(string name)
             => await _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
+
+    public async Task SaveToDatabase()
+        => await _dbContext.SaveChangesAsync();
 }

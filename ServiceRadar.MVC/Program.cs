@@ -5,7 +5,7 @@ using ServiceRadar.Infrastructure.Seeders;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 // Add all services from the Infrastructure project
 builder.Services.AddInfrastructure(builder.Configuration);
