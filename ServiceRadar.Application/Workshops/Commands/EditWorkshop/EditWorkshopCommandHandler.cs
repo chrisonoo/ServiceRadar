@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
+﻿using MediatR;
 
 using ServiceRadar.Domain.Interfaces;
 
 namespace ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 public class EditWorkshopCommandHandler : IRequestHandler<EditWorkshopCommand>
 {
-    private readonly IServiceRadarRepository _serviceRadarRepository;
+    private readonly IServiceRadarRepository _repository;
 
-    public EditWorkshopCommandHandler(IServiceRadarRepository serviceRadarRepository)
+    public EditWorkshopCommandHandler(IServiceRadarRepository repository)
     {
-        _serviceRadarRepository = serviceRadarRepository;
+        _repository = repository;
     }
 
     public async Task Handle(EditWorkshopCommand request, CancellationToken cancellationToken)
     {
-        var workshop = await _serviceRadarRepository.GetWorkshopByEncodedName(request.EncodedName!);
+        var workshop = await _repository.GetWorkshopByEncodedName(request.EncodedName!);
 
         workshop.Description = request.Description;
         workshop.About = request.About;
@@ -29,7 +23,7 @@ public class EditWorkshopCommandHandler : IRequestHandler<EditWorkshopCommand>
         workshop.ContactDetails.PostalCode = request.PostalCode;
         workshop.ContactDetails.PhoneNumber = request.PhoneNumber;
 
-        await _serviceRadarRepository.SaveToDatabase();
+        await _repository.SaveToDatabase();
 
         return;
     }

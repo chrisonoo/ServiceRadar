@@ -8,12 +8,12 @@ using ServiceRadar.Domain.Interfaces;
 namespace ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopCommand>
 {
-    private readonly IServiceRadarRepository _serviceRadarRepository;
+    private readonly IServiceRadarRepository _repository;
     private readonly IMapper _mapper;
 
-    public CreateWorkshopCommandHandler(IServiceRadarRepository serviceRadarRepository, IMapper mapper)
+    public CreateWorkshopCommandHandler(IServiceRadarRepository repository, IMapper mapper)
     {
-        _serviceRadarRepository = serviceRadarRepository;
+        _repository = repository;
         _mapper = mapper;
     }
 
@@ -22,7 +22,7 @@ public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopComman
         var workshop = _mapper.Map<Workshop>(request);
         workshop.EncodeName();
 
-        await _serviceRadarRepository.CreateWorkshop(workshop);
+        await _repository.CreateWorkshop(workshop);
 
         return;
     }
