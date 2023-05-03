@@ -2,10 +2,9 @@
 
 using MediatR;
 
-using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
-using ServiceRadar.Application.Workshops.Queries.GetByName;
+using ServiceRadar.Application.Workshops.Queries.GetWorkshopByName;
 
-namespace ServiceRadar.Application.Validators.Dtos;
+namespace ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 public class CreateWorkshopCommandValidator : AbstractValidator<CreateWorkshopCommand>
 {
     public CreateWorkshopCommandValidator(IMediator mediator)
@@ -16,7 +15,7 @@ public class CreateWorkshopCommandValidator : AbstractValidator<CreateWorkshopCo
             .MaximumLength(20).WithMessage("Maximum length: 20")
             .Custom((value, context) =>
             {
-                var existingWorkshopDto = mediator.Send(new GetByNameQuery(value)).Result;
+                var existingWorkshopDto = mediator.Send(new GetWorkshopByNameQuery(value)).Result;
                 if(existingWorkshopDto != null)
                 {
                     context.AddFailure($"{value} is not unique name for workshop");

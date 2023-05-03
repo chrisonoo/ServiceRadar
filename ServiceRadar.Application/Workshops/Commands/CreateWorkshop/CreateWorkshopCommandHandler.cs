@@ -22,7 +22,7 @@ public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopComman
         var workshop = _mapper.Map<Workshop>(request);
         workshop.EncodeName();
 
-        await _serviceRadarRepository.Create(workshop);
+        await _serviceRadarRepository.CreateWorkshop(workshop);
 
         return;
     }

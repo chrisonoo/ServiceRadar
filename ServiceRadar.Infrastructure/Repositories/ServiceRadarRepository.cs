@@ -14,18 +14,17 @@ public class ServiceRadarRepository : IServiceRadarRepository
         _dbContext = dbContext;
     }
 
-    public async Task Create(Workshop workshop)
+    public async Task CreateWorkshop(Workshop workshop)
     {
         _dbContext.Add(workshop);
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<Workshop>> GetAll()
+    public async Task<IEnumerable<Workshop>> GetAllWorkshops()
         => await _dbContext.Workshops.ToListAsync();
-
-    public async Task<Workshop?> GetByName(string name)
-        => await _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
-
     public async Task<Workshop> GetWorkshopByEncodedName(string encodedName)
         => await _dbContext.Workshops.FirstAsync(c => c.EncodedName == encodedName);
+
+    public async Task<Workshop?> GetWorkshopByName(string name)
+            => await _dbContext.Workshops.FirstOrDefaultAsync(cw => cw.Name.ToLower() == name.ToLower());
 }

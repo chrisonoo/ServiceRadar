@@ -4,7 +4,7 @@ using ServiceRadar.Infrastructure.Data;
 namespace ServiceRadar.Infrastructure.Seeders;
 public static class ServiceRadarSeederWorkshops
 {
-    private static List<Workshop> _workshopList = new List<Workshop>
+    private static readonly List<Workshop> _workshopList = new()
     {
         new Workshop
         {

@@ -19,7 +19,7 @@ public class GetAllWorkshopsQueryHandler : IRequestHandler<GetAllWorkshopsQuery,
 
     public async Task<IEnumerable<WorkshopDto>> Handle(GetAllWorkshopsQuery request, CancellationToken cancellationToken)
     {
-        var workshops = await _serviceRadarRepository.GetAll();
+        var workshops = await _serviceRadarRepository.GetAllWorkshops();
         var workshopDtos = _mapper.Map<IEnumerable<WorkshopDto>>(workshops);
 
         return workshopDtos;

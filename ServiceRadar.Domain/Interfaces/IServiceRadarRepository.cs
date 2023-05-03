@@ -3,8 +3,9 @@
 namespace ServiceRadar.Domain.Interfaces;
 public interface IServiceRadarRepository
 {
-    Task Create(Workshop workshop);
-    Task<IEnumerable<Workshop>> GetAll();
-    Task<Workshop?> GetByName(string name);
+    Task CreateWorkshop(Workshop workshop);
+    Task<IEnumerable<Workshop>> GetAllWorkshops();
     Task<Workshop> GetWorkshopByEncodedName(string encodedName);
+
+    Task<Workshop?> GetWorkshopByName(string name);
 }

@@ -3,7 +3,6 @@ using FluentValidation.AspNetCore;
 
 using Microsoft.Extensions.DependencyInjection;
 
-using ServiceRadar.Application.Validators.Dtos;
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 using ServiceRadar.Application.Workshops.Mappings;
 
