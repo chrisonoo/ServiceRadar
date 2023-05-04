@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,9 +17,15 @@ public static class ServiceCollectionExtension
     /// <param name="configuration">Represents a set of key/value application configuration properties.</param>
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        // Add database service
         services.AddDbContext<ServiceRadarDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("ServiceRadar")));
 
+        // Add identity service
+        services.AddDefaultIdentity<IdentityUser>()
+            .AddEntityFrameworkStores<ServiceRadarDbContext>();
+
+        // Add repository service
         services.AddScoped<IServiceRadarRepository, ServiceRadarRepository>();
     }
 }
