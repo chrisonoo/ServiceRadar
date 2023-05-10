@@ -18,19 +18,24 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
 
-// run the seed initializer
-using(var scope = app.Services.CreateScope())
+// Add this functionality if developer mode is enabled.
+if(app.Environment.IsDevelopment())
 {
-    var services = scope.ServiceProvider;
-
-    ServiceRadarSeeder.Initialize(services);
-}
-
-// Configure the HTTP request pipeline.
-if(!app.Environment.IsDevelopment())
-{
+    // Collaborate with AddDatabaseDeveloperPageExceptionFilter() and catches EF Core errors
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
+
+    // Run the seed initializer if developer mode is not enabled
+    using(var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        await ServiceRadarSeeder.SeedSampleDataAsync(services);
+    }
+}
+
+// Configure the HTTP request pipeline if developer mode is not enabled.
+if(!app.Environment.IsDevelopment())
+{
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
