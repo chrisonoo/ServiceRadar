@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-using ServiceRadar.Infrastructure.Seeders.Helpers;
+using ServiceRadar.Infrastructure.Seeders.Models;
 
 namespace ServiceRadar.Infrastructure.Seeders;
 public static class ServiceRadarSeederUsers

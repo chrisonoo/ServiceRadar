@@ -20,8 +20,13 @@ public class WorkshopController : Controller
         _mediator = mediator;
         _mapper = mapper;
     }
+
     public IActionResult Create()
     {
+        if(User.Identity == null || !User.Identity.IsAuthenticated)
+        {
+            return RedirectToPage("/Account/Login", new { area = "Identity" });
+        }
         return View();
     }
 
