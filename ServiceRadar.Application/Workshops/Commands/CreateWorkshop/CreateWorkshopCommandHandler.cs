@@ -25,7 +25,7 @@ public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopComman
         var workshop = _mapper.Map<Workshop>(request);
         workshop.EncodeName();
 
-        workshop.CreateById = _userContext.GetCurrentUser().Id;
+        workshop.CreateById = _userContext.GetCurrentUser()!.Id;
 
         await _repository.CreateWorkshop(workshop);
 

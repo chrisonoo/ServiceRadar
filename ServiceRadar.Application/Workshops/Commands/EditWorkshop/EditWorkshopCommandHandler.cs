@@ -1,20 +1,31 @@
 ﻿using MediatR;
 
+using ServiceRadar.Application.Common.ApplicationUser;
 using ServiceRadar.Domain.Interfaces;
 
 namespace ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 public class EditWorkshopCommandHandler : IRequestHandler<EditWorkshopCommand>
 {
     private readonly IServiceRadarRepository _repository;
+    private readonly IUserContext _userContext;
 
-    public EditWorkshopCommandHandler(IServiceRadarRepository repository)
+    public EditWorkshopCommandHandler(IServiceRadarRepository repository, IUserContext userContext)
     {
         _repository = repository;
+        _userContext = userContext;
     }
 
     public async Task Handle(EditWorkshopCommand request, CancellationToken cancellationToken)
     {
         var workshop = await _repository.GetWorkshopByEncodedName(request.EncodedName!);
+
+        var user = _userContext.GetCurrentUser();
+        var isEditable = user != null && workshop.CreateById == user.Id;
+
+        if(!isEditable)
+        {
+            return;
+        }
 
         workshop.Description = request.Description;
         workshop.About = request.About;
