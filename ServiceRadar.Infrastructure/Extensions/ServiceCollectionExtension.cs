@@ -21,9 +21,11 @@ public static class ServiceCollectionExtension
         services.AddDbContext<ServiceRadarDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("ServiceRadar")));
 
-        // Add identity service
+        // Add Identity services
         services.AddDefaultIdentity<IdentityUser>()
-            .AddEntityFrameworkStores<ServiceRadarDbContext>();
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ServiceRadarDbContext>()
+            .AddDefaultTokenProviders();
 
         // Add repository service
         services.AddScoped<IServiceRadarRepository, ServiceRadarRepository>();

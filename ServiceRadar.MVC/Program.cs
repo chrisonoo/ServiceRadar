@@ -7,14 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
+// Collaborate with UseDeveloperExceptionPage() and catches EF Core errors
+// https://github.com/aspnet/Announcements/issues/432
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 // Add all services from the Infrastructure project
 builder.Services.AddInfrastructure(builder.Configuration);
 // Add all services from the Application project
 builder.Services.AddApplication();
-
-// Collaborate with UseDeveloperExceptionPage() and catches EF Core errors
-// https://github.com/aspnet/Announcements/issues/432
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
 

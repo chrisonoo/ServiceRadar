@@ -19,6 +19,14 @@ public static class ServiceRadarSeeder
             }
         }
 
+        using(var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>())
+        {
+            if(await roleManager.FindByNameAsync("user") == null)
+            {
+                await ServiceRadarSeederRoles.Initialize(roleManager);
+            }
+        }
+
         using(var userManager = services.GetRequiredService<UserManager<IdentityUser>>())
         {
             if(await userManager.FindByEmailAsync("user@test.com") == null)
