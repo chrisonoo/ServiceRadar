@@ -1,13 +1,15 @@
-﻿using ServiceRadar.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+
 using ServiceRadar.Infrastructure.Data;
+using ServiceRadar.Infrastructure.Seeders.Models;
 
 namespace ServiceRadar.Infrastructure.Seeders;
 
 public static class ServiceRadarSeederWorkshops
 {
-    private static readonly List<Workshop> _workshopList = new()
+    private static readonly List<WorkshopSeedData> _workshopSeedDataList = new()
     {
-        new Workshop
+        new WorkshopSeedData
         {
             Name = "Mazda Service Senter",
             Description = "Authorized Mazda service center",
@@ -18,9 +20,10 @@ public static class ServiceRadarSeederWorkshops
                 Street = "Gjekstadveien 2",
                 PostalCode = "3218",
                 PhoneNumber = "+47 33 45 43 00"
-            }
+            },
+            UserName = "user@test.com"
         },
-        new Workshop
+        new WorkshopSeedData
         {
             Name = "Ford Transit Senter",
             Description = "Authorized Ford center",
@@ -31,9 +34,10 @@ public static class ServiceRadarSeederWorkshops
                 Street = "Nygårdsveien 79",
                 PostalCode = "3221",
                 PhoneNumber = "+47 815 20 500"
-            }
+            },
+            UserName = "user@test.com"
         },
-        new Workshop
+        new WorkshopSeedData
         {
             Name = "Tesla Senter",
             Description = "Authorized Tesla center",
@@ -44,16 +48,24 @@ public static class ServiceRadarSeederWorkshops
                 Street = "Fokserødveien 23",
                 PostalCode = "3241",
                 PhoneNumber = "+47 23 96 02 85"
-            }
+            },
+            UserName = "user@test.com"
         },
     };
 
     public static async Task Initialize(ServiceRadarDbContext dbContext)
     {
-        foreach(var workshop in _workshopList)
+        foreach(var workshop in _workshopSeedDataList)
         {
             workshop.EncodeName();
+            workshop.CreateById = await GetUserId(dbContext, workshop.UserName);
             await dbContext.Workshops.AddAsync(workshop);
         }
+    }
+
+    private static async Task<string> GetUserId(ServiceRadarDbContext dbContext, string userName)
+    {
+        var user = await dbContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+        return user!.Id;
     }
 }

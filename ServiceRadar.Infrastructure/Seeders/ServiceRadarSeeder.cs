@@ -9,16 +9,6 @@ public static class ServiceRadarSeeder
 {
     public static async Task SeedSampleDataAsync(IServiceProvider services)
     {
-        using(var dbContext = new ServiceRadarDbContext(
-            services.GetRequiredService<DbContextOptions<ServiceRadarDbContext>>()))
-        {
-            if(!dbContext.Workshops.Any())
-            {
-                await ServiceRadarSeederWorkshops.Initialize(dbContext);
-                dbContext.SaveChanges();
-            }
-        }
-
         using(var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>())
         {
             if(await roleManager.FindByNameAsync("user") == null)
@@ -32,6 +22,16 @@ public static class ServiceRadarSeeder
             if(await userManager.FindByEmailAsync("user@test.com") == null)
             {
                 await ServiceRadarSeederUsers.Initialize(userManager);
+            }
+        }
+
+        using(var dbContext = new ServiceRadarDbContext(
+            services.GetRequiredService<DbContextOptions<ServiceRadarDbContext>>()))
+        {
+            if(!dbContext.Workshops.Any())
+            {
+                await ServiceRadarSeederWorkshops.Initialize(dbContext);
+                dbContext.SaveChanges();
             }
         }
     }

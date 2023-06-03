@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 
 using Microsoft.Extensions.DependencyInjection;
 
+using ServiceRadar.Application.Common.ApplicationUser;
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 using ServiceRadar.Application.Workshops.Mappings;
 
@@ -11,6 +12,9 @@ public static class ServiceCollectionExtensions
 {
     public static void AddApplication(this IServiceCollection services)
     {
+        //Register the service to obtain information about the logged in user
+        services.AddScoped<IUserContext, UserContext>();
+
         // Register MediatR service
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining(typeof(CreateWorkshopCommand)));
 
