@@ -2,6 +2,7 @@
 
 using MediatR;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
@@ -21,16 +22,14 @@ public class WorkshopController : Controller
         _mapper = mapper;
     }
 
+    [Authorize]
     public IActionResult Create()
     {
-        if(User.Identity == null || !User.Identity.IsAuthenticated)
-        {
-            return RedirectToPage("/Account/Login", new { area = "Identity" });
-        }
         return View();
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Create(CreateWorkshopCommand command)
     {
         if(!ModelState.IsValid)
