@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using AutoMapper;
+
+using FluentValidation;
 using FluentValidation.AspNetCore;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +21,14 @@ public static class ServiceCollectionExtensions
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining(typeof(CreateWorkshopCommand)));
 
         // Register all AutoMapper mapping profile in DI
-        services.AddAutoMapper(typeof(WorkshopMappingProfile));
+        services.AddScoped(provider => new MapperConfiguration(cfg =>
+        {
+            var scope = provider.CreateScope();
+            var userContext = scope.ServiceProvider.GetRequiredService<IUserContext>();
+
+            cfg.AddProfile(new WorkshopMappingProfile(userContext));
+        }).CreateMapper()
+        );
 
         // Register all validation class in DI
         services.AddValidatorsFromAssemblyContaining<CreateWorkshopCommandValidator>()

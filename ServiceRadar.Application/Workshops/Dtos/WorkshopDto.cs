@@ -9,4 +9,5 @@ public class WorkshopDto
     public string? City { get; set; }
     public string? PostalCode { get; set; }
     public string? EncodedName { get; set; }
+    public bool IsEditable { get; set; }
 }

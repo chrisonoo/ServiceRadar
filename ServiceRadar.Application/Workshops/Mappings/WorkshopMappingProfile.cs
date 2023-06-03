@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 
+using ServiceRadar.Application.Common.ApplicationUser;
 using ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 using ServiceRadar.Application.Workshops.Dtos;
 using ServiceRadar.Domain.Entities;
@@ -7,8 +8,10 @@ using ServiceRadar.Domain.Entities;
 namespace ServiceRadar.Application.Workshops.Mappings;
 public class WorkshopMappingProfile : Profile
 {
-    public WorkshopMappingProfile()
+    public WorkshopMappingProfile(IUserContext userContext)
     {
+        var user = userContext.GetCurrentUser();
+
         CreateMap<WorkshopDto, Workshop>()
             .ForMember(e => e.ContactDetails, opt => opt.MapFrom(src => new WorkshopContactDetails()
             {
@@ -19,6 +22,7 @@ public class WorkshopMappingProfile : Profile
             }));
 
         CreateMap<Workshop, WorkshopDto>()
+            .ForMember(dto => dto.IsEditable, opt => opt.MapFrom(src => user != null && src.CreateById == user.Id))
             .ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber))
             .ForMember(dto => dto.Street, opt => opt.MapFrom(src => src.ContactDetails.Street))
             .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City))

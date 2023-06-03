@@ -12,7 +12,7 @@ public static class ServiceRadarSeederWorkshops
         new WorkshopSeedData
         {
             Name = "Mazda Service Senter",
-            Description = "Authorized Mazda service center",
+            Description = "Authorized Mazda service",
             About = "Warranty and post-warranty service. Full service.",
             ContactDetails = new()
             {

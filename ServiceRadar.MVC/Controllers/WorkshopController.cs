@@ -51,6 +51,12 @@ public class WorkshopController : Controller
     public async Task<IActionResult> Edit(string encodedName)
     {
         var workshopDto = await _mediator.Send(new GetWorkshopByEncodedNameQuery(encodedName));
+
+        if(!workshopDto.IsEditable)
+        {
+            return RedirectToAction("NoAccess", "Home");
+        }
+
         var workshopToEdit = _mapper.Map<EditWorkshopCommand>(workshopDto);
 
         return View(workshopToEdit);
