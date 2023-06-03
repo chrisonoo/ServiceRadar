@@ -15,6 +15,7 @@ public static class ServiceRadarSeederUsers
                 Email = "user@test.com",
             },
             Password = "TEst!@12",
+            Role = "user",
         },
         new UserSeedData
         {
@@ -24,6 +25,7 @@ public static class ServiceRadarSeederUsers
                 Email = "redactor@test.com",
             },
             Password = "TEst!@12",
+            Role= "redactor",
         },
         new UserSeedData
         {
@@ -33,6 +35,7 @@ public static class ServiceRadarSeederUsers
                 Email = "admin@test.com",
             },
             Password = "TEst!@12",
+            Role = "admin",
         }
     };
 
@@ -41,6 +44,7 @@ public static class ServiceRadarSeederUsers
         foreach(var user in _userList)
         {
             await userManager.CreateAsync(user.User, user.Password);
+            await userManager.AddToRoleAsync(user.User, user.Role);
         }
     }
 }
