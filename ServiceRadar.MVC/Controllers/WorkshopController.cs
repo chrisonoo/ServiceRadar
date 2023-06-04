@@ -22,13 +22,9 @@ public class WorkshopController : Controller
         _mapper = mapper;
     }
 
-    [Authorize]
+    [Authorize(Roles = "User")]
     public IActionResult Create()
     {
-        if(!User.IsInRole("User"))
-        {
-            return RedirectToAction("NoAccess", "Home");
-        }
         return View();
     }
 
