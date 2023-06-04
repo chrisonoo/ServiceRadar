@@ -7,15 +7,15 @@ public static class ServiceRadarSeederRoles
     {
         new IdentityRole
         {
-            Name = "user",
+            Name = "User",
         },
         new IdentityRole
         {
-            Name = "redactor",
+            Name = "Redactor",
         },
         new IdentityRole
         {
-            Name = "admin",
+            Name = "Admin",
         },
     };
 

@@ -25,6 +25,10 @@ public class WorkshopController : Controller
     [Authorize]
     public IActionResult Create()
     {
+        if(!User.IsInRole("User"))
+        {
+            return RedirectToAction("NoAccess", "Home");
+        }
         return View();
     }
 
