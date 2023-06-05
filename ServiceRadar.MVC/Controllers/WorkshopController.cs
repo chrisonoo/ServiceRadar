@@ -29,7 +29,7 @@ public class WorkshopController : Controller
     }
 
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "User")]
     public async Task<IActionResult> Create(CreateWorkshopCommand command)
     {
         if(!ModelState.IsValid)

@@ -22,10 +22,16 @@ public class CreateWorkshopCommandHandler : IRequestHandler<CreateWorkshopComman
 
     public async Task Handle(CreateWorkshopCommand request, CancellationToken cancellationToken)
     {
+        var currentUser = _userContext.GetCurrentUser();
+        if(currentUser == null || !currentUser.IsInRole("User"))
+        {
+            return;
+        }
+
         var workshop = _mapper.Map<Workshop>(request);
         workshop.EncodeName();
 
-        workshop.CreateById = _userContext.GetCurrentUser()!.Id;
+        workshop.CreateById = currentUser.Id;
 
         await _repository.CreateWorkshop(workshop);
 

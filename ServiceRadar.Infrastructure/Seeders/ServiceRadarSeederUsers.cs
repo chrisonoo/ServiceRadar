@@ -15,7 +15,17 @@ public static class ServiceRadarSeederUsers
                 Email = "user@test.com",
             },
             Password = "TEst!@12",
-            Role = "user",
+            Role = "User",
+        },
+        new UserSeedData
+        {
+            User = new()
+            {
+                UserName = "user2@test.com",
+                Email = "user2@test.com",
+            },
+            Password = "TEst!@12",
+            Role = "User",
         },
         new UserSeedData
         {
@@ -25,7 +35,7 @@ public static class ServiceRadarSeederUsers
                 Email = "redactor@test.com",
             },
             Password = "TEst!@12",
-            Role= "redactor",
+            Role= "Redactor",
         },
         new UserSeedData
         {
@@ -35,7 +45,7 @@ public static class ServiceRadarSeederUsers
                 Email = "admin@test.com",
             },
             Password = "TEst!@12",
-            Role = "admin",
+            Role = "Admin",
         }
     };
 

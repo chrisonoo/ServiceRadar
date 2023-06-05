@@ -35,7 +35,7 @@ public static class ServiceRadarSeederWorkshops
                 PostalCode = "3221",
                 PhoneNumber = "+47 815 20 500"
             },
-            UserName = "user@test.com"
+            UserName = "user2@test.com"
         },
         new WorkshopSeedData
         {
