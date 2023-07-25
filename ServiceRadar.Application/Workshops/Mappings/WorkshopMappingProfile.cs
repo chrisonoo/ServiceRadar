@@ -22,7 +22,9 @@ public class WorkshopMappingProfile : Profile
             }));
 
         CreateMap<Workshop, WorkshopDto>()
-            .ForMember(dto => dto.IsEditable, opt => opt.MapFrom(src => user != null && src.CreateById == user.Id))
+            .ForMember(dto => dto.IsEditable, opt => opt.MapFrom(
+                src => user != null && (src.CreateById == user.Id || user.IsInRole("Redactor") || user.IsInRole("Admin"))
+            ))
             .ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber))
             .ForMember(dto => dto.Street, opt => opt.MapFrom(src => src.ContactDetails.Street))
             .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City))

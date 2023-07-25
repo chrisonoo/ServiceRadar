@@ -20,7 +20,7 @@ public class EditWorkshopCommandHandler : IRequestHandler<EditWorkshopCommand>
         var workshop = await _repository.GetWorkshopByEncodedName(request.EncodedName!);
 
         var user = _userContext.GetCurrentUser();
-        var isEditable = user != null && workshop.CreateById == user.Id;
+        var isEditable = user != null && (workshop.CreateById == user.Id || user.IsInRole("Moderator") || user.IsInRole("Admin"));
 
         if(!isEditable)
         {
