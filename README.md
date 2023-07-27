@@ -10,19 +10,23 @@
         </a>
     </h3>
     <p>A simple application for searching for various services in the area</p>
-    <p><b>Status:</b> Project under developmnet</p>
+    <p><b>Status:</b> Project under development</p>
     <br>
     <p>Technologies and tools:</p>
     <p>
         <img src="docs/img/logos/dotnet.svg" width="40" height="40" alt="dotnet"/>
         <img src="docs/img/logos/csharp.svg" width="40" height="40" alt="csharp"/>
         <img src="docs/img/logos/sqlserver.svg" width="40" height="40" alt="sqlserver"/>
+        <img src="docs/img/logos/mediatr.svg" width="40" height="40" alt="mediatr"/>
+        <img src="docs/img/logos/auto-mapper.svg" width="40" height="40" alt="auto mapper"/>
+        <img src="docs/img/logos/fluent-validation.svg" width="40" height="40" alt="fluent validation"/>
         <img src="docs/img/logos/html5.svg" width="40" height="40" alt="html"/>
         <img src="docs/img/logos/css3.svg" width="40" height="40" alt="css"/>
         <img src="docs/img/logos/jquery.svg" width="40" height="40" alt="jquery"/>
-        <img src="docs/img/logos/js.svg" width="40" height="40" alt="javascript"/>
         <br/>
+        <img src="docs/img/logos/js.svg" width="40" height="40" alt="javascript"/>
         <img src="docs/img/logos/ajax.svg" width="40" height="40" alt="ajax"/>
+        <img src="docs/img/logos/toastr.svg" width="40" height="40" alt="toastr"/>
         <img src="docs/img/logos/md.svg" width="40" height="40" alt="markdown"/>
         <img src="docs/img/logos/git.svg" width="40" height="40" alt="git"/>
         <img src="docs/img/logos/github.svg" width="40" height="40" alt="github"/>
