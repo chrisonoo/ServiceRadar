@@ -13,5 +13,7 @@ public class Workshop
     public string CreateById { get; set; } = default!;
     public IdentityUser CreateBy { get; set; } = default!;
 
+    public List<WorkshopService> WorkshopServices { get; set; } = new();
+
     public void EncodeName() => EncodedName = Name.ToLowerInvariant().Replace(" ", "-");
 }

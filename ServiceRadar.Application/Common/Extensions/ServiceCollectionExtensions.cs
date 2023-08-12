@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ServiceRadar.Application.Common.ApplicationUser;
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 using ServiceRadar.Application.Workshops.Mappings;
+using ServiceRadar.Application.WorkshopServices.Mappings;
 
 namespace ServiceRadar.Application.Common.Extensions;
 public static class ServiceCollectionExtensions
@@ -27,6 +28,7 @@ public static class ServiceCollectionExtensions
             var userContext = scope.ServiceProvider.GetRequiredService<IUserContext>();
 
             cfg.AddProfile(new WorkshopMappingProfile(userContext));
+            cfg.AddProfile(new WorkshopServiceMappingProfile());
         }).CreateMapper()
         );
 

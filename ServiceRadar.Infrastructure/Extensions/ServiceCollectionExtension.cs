@@ -29,5 +29,8 @@ public static class ServiceCollectionExtension
 
         // Add repository service
         services.AddScoped<IServiceRadarRepository, ServiceRadarRepository>();
+
+        // Add repository services service
+        services.AddScoped<IWorkshopServiceRepository, WorkshopServiceRepository>();
     }
 }

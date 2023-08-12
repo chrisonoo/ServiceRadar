@@ -9,6 +9,7 @@ public class ServiceRadarDbContext : IdentityDbContext
     public ServiceRadarDbContext(DbContextOptions<ServiceRadarDbContext> options) : base(options) { }
 
     public DbSet<Workshop> Workshops { get; set; }
+    public DbSet<WorkshopService> WorkshopServices { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,5 +22,10 @@ public class ServiceRadarDbContext : IdentityDbContext
         // and creates one large table.
         modelBuilder.Entity<Workshop>()
             .OwnsOne(c => c.ContactDetails);
+
+        modelBuilder.Entity<Workshop>()
+            .HasMany(s => s.WorkshopServices)
+            .WithOne(w => w.Workshop)
+            .HasForeignKey(i => i.WorkshopId);
     }
 }

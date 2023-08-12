@@ -22,6 +22,7 @@ public class ServiceRadarRepository : IServiceRadarRepository
 
     public async Task<IEnumerable<Workshop>> GetAllWorkshops()
         => await _dbContext.Workshops.ToListAsync();
+
     public async Task<Workshop> GetWorkshopByEncodedName(string encodedName)
         => await _dbContext.Workshops.FirstAsync(c => c.EncodedName == encodedName);
 
