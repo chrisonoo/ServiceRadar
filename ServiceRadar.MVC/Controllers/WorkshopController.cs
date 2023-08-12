@@ -40,7 +40,7 @@ public class WorkshopController : Controller
         //await _mediator.Send(command);
 
         // SetNotification is a method that extends Controller
-        this.SetNotification("succes", $"Created workshop: {command.Name}");
+        this.SetNotification("success", $"Created workshop: {command.Name}");
 
         return RedirectToAction(nameof(Index));
     }
