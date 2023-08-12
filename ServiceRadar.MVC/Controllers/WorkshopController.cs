@@ -4,11 +4,11 @@ using MediatR;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
 using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 using ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 using ServiceRadar.Application.Workshops.Queries.GetAllWorkshops;
 using ServiceRadar.Application.Workshops.Queries.GetWorkshopByEncodedName;
+using ServiceRadar.MVC.Extensions;
 
 namespace ServiceRadar.MVC.Controllers;
 public class WorkshopController : Controller
@@ -36,7 +36,12 @@ public class WorkshopController : Controller
         {
             return View(command);
         }
-        await _mediator.Send(command);
+
+        //await _mediator.Send(command);
+
+        // SetNotification is a method that extends Controller
+        this.SetNotification("succes", $"Created workshop: {command.Name}");
+
         return RedirectToAction(nameof(Index));
     }
 

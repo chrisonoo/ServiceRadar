@@ -1,6 +1,10 @@
-﻿@{
+﻿@using Newtonsoft.Json;
+@{
     var controller = ViewContext.RouteData.Values["Controller"]?.ToString();
     var action = ViewContext.RouteData.Values["Action"]?.ToString();
+    var notification = TempData["Notification"] != null
+    ? (Notification)JsonConvert.DeserializeObject<Notification>(TempData["Notification"]!.ToString()!)!
+    : null;
 }
 
 <!DOCTYPE html>
@@ -53,6 +57,14 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @if(notification != null)
+    {
+        <script>
+            alert("@notification.Message, type: @notification.Type")
+        </script>
+    }
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
