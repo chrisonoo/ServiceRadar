@@ -10,14 +10,14 @@
 <div class="modal fade" id="createWorkshopServiceModal" tabindex="-1" aria-labelledby="createWorkshopServiceModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form asp-action="_CreateWorkshopService">
+            <form asp-action="CreateWorkshopService">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="createWorkshopServiceModalLabel">Create new workshop service</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input asp-for="WorskhopEncodedName" class="form-control" type="hidden" />
+                    <input asp-for="WorkshopEncodedName" class="form-control" type="hidden" />
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
                         <input asp-for="Description" class="form-control" />

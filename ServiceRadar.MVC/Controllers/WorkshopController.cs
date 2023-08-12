@@ -8,6 +8,7 @@ using ServiceRadar.Application.Workshops.Commands.CreateWorkshop;
 using ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 using ServiceRadar.Application.Workshops.Queries.GetAllWorkshops;
 using ServiceRadar.Application.Workshops.Queries.GetWorkshopByEncodedName;
+using ServiceRadar.Application.WorkshopServices.Commands;
 using ServiceRadar.MVC.Extensions;
 
 namespace ServiceRadar.MVC.Controllers;
@@ -43,6 +44,21 @@ public class WorkshopController : Controller
         this.SetNotification("success", $"Created workshop: {command.Name}");
 
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [Authorize(Roles = "User")]
+    [Route("Workshop/WorkshopService")]
+    public async Task<IActionResult> CreateWorkshopService(CreateWorkshopServiceCommand command)
+    {
+        if(!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        await _mediator.Send(command);
+
+        return Ok();
     }
 
     [Route("Workshop/{encodedName}/Details")]
