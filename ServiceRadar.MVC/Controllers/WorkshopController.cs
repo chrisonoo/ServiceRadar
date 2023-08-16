@@ -9,6 +9,7 @@ using ServiceRadar.Application.Workshops.Commands.EditWorkshop;
 using ServiceRadar.Application.Workshops.Queries.GetAllWorkshops;
 using ServiceRadar.Application.Workshops.Queries.GetWorkshopByEncodedName;
 using ServiceRadar.Application.WorkshopServices.Commands;
+using ServiceRadar.Application.WorkshopServices.Queries.GetWorkshopServices;
 using ServiceRadar.MVC.Extensions;
 
 namespace ServiceRadar.MVC.Controllers;
@@ -99,5 +100,14 @@ public class WorkshopController : Controller
     {
         var workshops = await _mediator.Send(new GetAllWorkshopsQuery());
         return View(workshops);
+    }
+
+    // Retrieves information about workshop's services
+    [HttpGet]
+    [Route("Workshop/{encodedName}/WorkshopService")]
+    public async Task<IActionResult> GetWorkshopServices(string encodedName)
+    {
+        var services = await _mediator.Send(new GetWorkshopServicesQuery() { EncodedName = encodedName });
+        return Ok(services);
     }
 }

@@ -17,8 +17,4 @@
     <ProjectReference Include="..\ServiceRadar.Domain\ServiceRadar.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="WorkshopServices\Queries\" />
-  </ItemGroup>
-
 </Project>
