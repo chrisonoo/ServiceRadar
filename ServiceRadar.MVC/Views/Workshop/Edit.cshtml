@@ -51,9 +51,11 @@
 </div>
 
 <div class="form-group m-3">
-    <partial name="_CreateWorkshopService" model="new CreateWorkshopServiceCommand(){WorskhopEncodedName=Model.EncodedName!}" />
+    <partial name="_CreateWorkshopService" model="new CreateWorkshopServiceCommand(){WorkshopEncodedName=Model.EncodedName!}" />
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="~/js/Workshop/Edit.js"></script>
 }
