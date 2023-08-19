@@ -32,7 +32,7 @@ public class CreateWorkshopServiceCommandHandler : IRequestHandler<CreateWorksho
         var workshopService = new WorkshopService()
         {
             Cost = request.Cost,
-            Description = request.Description,
+            Description = request.ServiceDescription,
             WorkshopId = workshop.Id,
         };
 

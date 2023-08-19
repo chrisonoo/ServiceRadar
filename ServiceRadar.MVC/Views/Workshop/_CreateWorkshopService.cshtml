@@ -2,7 +2,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createWorkshopServiceModal">
+<button id="add-workshop-services-button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createWorkshopServiceModal">
     Add Workshop Service
 </button>
 
@@ -19,9 +19,9 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input asp-for="WorkshopEncodedName" class="form-control" type="hidden" />
                     <div class="form-group">
-                        <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
+                        <label asp-for="ServiceDescription" class="control-label">Description</label>
+                        <input asp-for="ServiceDescription" class="form-control" />
+                        <span asp-validation-for="ServiceDescription" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Cost" class="control-label"></label>

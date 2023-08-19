@@ -6,7 +6,7 @@ public class CreateWorkshopServiceCommandValidator : AbstractValidator<CreateWor
     public CreateWorkshopServiceCommandValidator()
     {
         RuleFor(s => s.Cost).NotEmpty().NotNull();
-        RuleFor(s => s.Description).NotEmpty().NotNull();
+        RuleFor(s => s.ServiceDescription).NotEmpty().NotNull();
         RuleFor(s => s.WorkshopEncodedName).NotEmpty().NotNull();
     }
 }
