@@ -55,3 +55,12 @@
     }
     <a class="btn btn-outline-secondary" asp-action="Index">Back to List</a>
 </div>
+
+<div class="row">
+    <h4 class="mt-3">Workshop services:</h4>
+    <div id="services" data-encoded-name="@Model.EncodedName"></div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Workshop/Details.js"></script>
+}

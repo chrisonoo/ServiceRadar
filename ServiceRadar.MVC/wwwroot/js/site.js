@@ -1,4 +1,49 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const RenderWorkshopServices = (services, container) => {
+    container.empty();
 
-// Write your JavaScript code.
+    let servicesTable = '';
+    let iteration = 1;
+
+    for (const service of services) {
+        servicesTable +=
+            `<tr><th scope="row">${iteration}</th>
+                 <td>${service.description}</td>
+                 <td>${service.cost}</td></tr>`
+        iteration++;
+    }
+
+    container.append(
+        `<table class="table">
+                 <thead>
+                     <tr>
+                         <th scope="col">#</th>
+                         <th scope="col">Service</th>
+                         <th scope="col">Price</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     ${servicesTable}
+                 </tbody>
+             </table>`
+    )
+}
+
+const LoadWorkshopServices = () => {
+    const container = $("#services");
+    const workshopEncodedName = container.data("encodedName");
+
+    $.ajax({
+        url: `/Workshop/${workshopEncodedName}/WorkshopService`,
+        type: 'get',
+        success: function (data) {
+            if (!data.length) {
+                container.html("There are no services for this workshop");
+            } else {
+                RenderWorkshopServices(data, container);
+            }
+        },
+        error: function () {
+            toastr["error"]("Something went wrong");
+        }
+    });
+}
