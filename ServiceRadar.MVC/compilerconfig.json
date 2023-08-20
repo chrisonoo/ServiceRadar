@@ -9,7 +9,7 @@
     },
     {
         "outputFile": "wwwroot/css/bootstrap.css",
-        "inputFile": "wwwroot/scss/lib/bootstrap-5.3.1/bootstrap.scss",
+        "inputFile": "wwwroot/lib/bootstrap-5.3.1/scss/bootstrap.scss",
         "options": {
             "sourceMap": true,
             "autoPrefix": "defaults"
