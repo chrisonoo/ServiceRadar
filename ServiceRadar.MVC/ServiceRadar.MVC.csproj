@@ -7,6 +7,72 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_floating-labels.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_form-check.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_form-control.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_form-range.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_form-select.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_form-text.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_input-group.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_labels.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\forms\_validation.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_clearfix.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_color-bg.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_colored-links.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_focus-ring.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_icon-link.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_position.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_ratio.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_stacks.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_stretched-link.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_text-truncation.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_visually-hidden.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\helpers\_vr.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_alert.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_backdrop.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_banner.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_border-radius.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_buttons.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_caret.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_clearfix.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_color-mode.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_color-scheme.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_container.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_deprecate.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_forms.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_gradients.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_grid.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_image.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_list-group.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_lists.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_pagination.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_reset-text.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_resize.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_table-variants.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_text-truncate.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_transition.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_utilities.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\mixins\_visually-hidden.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\jasmine.js" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\mixins\_color-modes.test.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\mixins\_media-query-color-mode-full.test.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\mixins\_utilities.test.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\sass-true\register.js" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\sass-true\runner.js" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\tests\utilities\_api.test.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\utilities\_api.scss" />
+    <None Include="wwwroot\scss\lib\bootstrap-5.3.1\vendor\_rfs.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildWebCompiler2022" Version="1.14.10" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -18,6 +84,10 @@
   <ItemGroup>
     <ProjectReference Include="..\ServiceRadar.Application\ServiceRadar.Application.csproj" />
     <ProjectReference Include="..\ServiceRadar.Infrastructure\ServiceRadar.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
 </Project>
