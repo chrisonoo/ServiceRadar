@@ -7,7 +7,7 @@
     for (const service of services) {
         servicesTable +=
             `<tr><th scope="row">${iteration}</th>
-                 <td>${service.description}</td>
+                 <td>${service.serviceDescription}</td>
                  <td>${service.cost}</td></tr>`
         iteration++;
     }

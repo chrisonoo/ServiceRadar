@@ -8,6 +8,9 @@ public class WorkshopServiceMappingProfile : Profile
     public WorkshopServiceMappingProfile()
     {
         CreateMap<WorkshopServiceDto, WorkshopService>()
-            .ReverseMap();
+            .ForMember(e => e.Description, opt => opt.MapFrom(src => src.ServiceDescription));
+
+        CreateMap<WorkshopService, WorkshopServiceDto>()
+            .ForMember(e => e.ServiceDescription, opt => opt.MapFrom(src => src.Description));
     }
 }
