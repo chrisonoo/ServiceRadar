@@ -15,6 +15,7 @@
     <title>@ViewData["Title"] - Service Radar</title>
     <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="~/lib/toastr.js/toastr.min.css" asp-append-version="true" />
 </head>
 <body>
@@ -49,7 +50,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <partial name="_InfoButton.cshtml" />
+
+    <footer class="footer text-muted">
         <div class="container">
             &copy; 2023 - Service Radar - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

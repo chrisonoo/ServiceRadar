@@ -1,0 +1,55 @@
+﻿<!-- Button trigger modal -->
+<div class="fab-container">
+    <div id="fab-button" class="fab shadow" data-bs-toggle="modal" data-bs-target="#infoAboutProject">
+        <div class="fab-content">
+            <span class="material-symbols-rounded">support_agent</span>
+        </div>
+    </div>
+    <!-- Additional buttons expanded when hovering over FAB* -->
+    @* <div class="sub-button shadow">
+    <a href="google.com" target="_blank">
+    <span class="material-symbols-rounded">phone</span>
+    </a>
+    </div>
+    <div class="sub-button shadow">
+    <a href="google.com" target="_blank">
+    <span class="material-symbols-rounded">mail_outline</span>
+    </a>
+    </div>
+    <div class="sub-button shadow">
+    <a href="google.com" target="_blank">
+    <span class="material-symbols-rounded">language</span>
+    </a>
+    </div>
+    <div class="sub-button shadow">
+    <a href="google.com" target="_blank">
+    <span class="material-symbols-rounded">help_outline</span>
+    </a>
+    </div> *@
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="infoAboutProject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoAboutProjectLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="infoAboutProjectLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="fs-5">Popover in a modal</h2>
+                <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
+                <hr>
+                <h2 class="fs-5">Tooltips in a modal</h2>
+                <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
