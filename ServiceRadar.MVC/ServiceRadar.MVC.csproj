@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\img\logo.svg" />
     <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_floating-labels.scss" />
     <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-check.scss" />
     <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-control.scss" />
@@ -338,6 +339,10 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\img\logo.svg" />
   </ItemGroup>
 
   <ItemGroup>

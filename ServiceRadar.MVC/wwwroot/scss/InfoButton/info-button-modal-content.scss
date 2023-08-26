@@ -1,0 +1,39 @@
+﻿$background-dark: #000000;
+$light: rgb(75, 162, 255);
+$background-light1: rgb(153, 202, 255);
+
+.top {
+    border-bottom: none;
+    height: 50px;
+    background-color: $background-dark;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+
+    .line {
+        position: relative;
+        width: 30px;
+        border-top: 5px solid #e6ce37;
+        margin-right: 20px;
+    }
+}
+
+.middle {
+    background-color: $light;
+    padding: 20px 30px;
+
+    .link {
+        margin: 0 2px 0 2px;
+        vertical-align: sub;
+        font-size: 16px;
+    }
+
+    .table-description {
+        width: 100px;
+    }
+}
+
+.bottom {
+    border-top: none;
+    background-color: $background-dark;
+}
