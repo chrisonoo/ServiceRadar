@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRadar.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRadar.Domain.Tests", "ServiceRadar.Domain.Tests\ServiceRadar.Domain.Tests.csproj", "{F78E86C0-24F1-42C1-B41A-C0D62AC96753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRadar.Application.Tests", "ServiceRadar.Application.Tests\ServiceRadar.Application.Tests.csproj", "{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{66F0AA42-9380-4179-B97E-C99839E67090}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,17 @@ Global
 		{F78E86C0-24F1-42C1-B41A-C0D62AC96753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F78E86C0-24F1-42C1-B41A-C0D62AC96753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78E86C0-24F1-42C1-B41A-C0D62AC96753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F78E86C0-24F1-42C1-B41A-C0D62AC96753} = {66F0AA42-9380-4179-B97E-C99839E67090}
+		{04434CD3-AF1C-4CA5-B72D-F5B919D2AC07} = {66F0AA42-9380-4179-B97E-C99839E67090}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61022D71-E662-4EE7-A680-6C28CB8CAA3C}
