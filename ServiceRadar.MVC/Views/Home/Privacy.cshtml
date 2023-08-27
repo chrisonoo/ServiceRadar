@@ -1,6 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model Privacy
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+<p>@Model.Description</p>
+
+<ul>
+    @foreach(var tag in Model.Tags)
+    {
+        <li>@tag</li>
+    }
+</ul>

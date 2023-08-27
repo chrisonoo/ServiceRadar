@@ -50,7 +50,9 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Workshop}/{action=Index}/{id?}");
+
+app.MapFallbackToController("NoPage", "Home");
 
 app.MapRazorPages();
 
