@@ -163,7 +163,6 @@ The application allows operation in the following modes, depending on the user's
 - Entity Framework (utilizing both **Annotations** and **Fluent API**)
 - Code First database and Seeding
 - Automatic Resource Management with the **using** statement (during seeding)
-- Hard Delete
 - SOLID
 - CRUD
 - CQRS
