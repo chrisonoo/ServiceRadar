@@ -34,5 +34,15 @@ public static class ServiceRadarSeeder
                 dbContext.SaveChanges();
             }
         }
+
+        using(var dbContext = new ServiceRadarDbContext(
+            services.GetRequiredService<DbContextOptions<ServiceRadarDbContext>>()))
+        {
+            if(!dbContext.WorkshopServices.Any())
+            {
+                await ServiceRadarSeederWorkshopServices.Initialize(dbContext);
+                dbContext.SaveChanges();
+            }
+        }
     }
 }
