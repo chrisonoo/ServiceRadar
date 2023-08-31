@@ -1,527 +1,527 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="compilerconfig.json" />
-    <Content Remove="wwwroot\img\logo.svg" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_floating-labels.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-check.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-control.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-range.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-select.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-text.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_input-group.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_labels.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_validation.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_clearfix.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_color-bg.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_colored-links.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_focus-ring.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_icon-link.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_position.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_ratio.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stacks.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stretched-link.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_text-truncation.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_visually-hidden.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_vr.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_alert.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_backdrop.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_banner.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_border-radius.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_box-shadow.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_breakpoints.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_buttons.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_caret.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_clearfix.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-mode.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-scheme.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_container.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_deprecate.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_forms.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_gradients.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_grid.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_image.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_list-group.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_lists.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_pagination.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_reset-text.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_resize.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_table-variants.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_text-truncate.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_transition.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_utilities.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_visually-hidden.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\jasmine.js" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_color-modes.test.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_media-query-color-mode-full.test.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_utilities.test.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\register.js" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\runner.js" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\utilities\_api.test.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\utilities\_api.scss" />
-    <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\vendor\_rfs.scss" />
-  </ItemGroup>
+    <ItemGroup>
+        <Content Remove="compilerconfig.json" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_floating-labels.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-check.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-control.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-range.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-select.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-text.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_input-group.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_labels.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\forms\_validation.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_clearfix.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_color-bg.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_colored-links.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_focus-ring.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_icon-link.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_position.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_ratio.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stacks.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stretched-link.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_text-truncation.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_visually-hidden.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_vr.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_alert.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_backdrop.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_banner.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_border-radius.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_box-shadow.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_breakpoints.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_buttons.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_caret.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_clearfix.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-mode.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-scheme.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_container.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_deprecate.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_forms.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_gradients.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_grid.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_image.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_list-group.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_lists.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_pagination.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_reset-text.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_resize.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_table-variants.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_text-truncate.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_transition.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_utilities.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_visually-hidden.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\jasmine.js" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_color-modes.test.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_media-query-color-mode-full.test.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_utilities.test.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\register.js" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\runner.js" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\tests\utilities\_api.test.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\utilities\_api.scss" />
+        <Content Remove="wwwroot\lib\bootstrap-5.3.1\scss\vendor\_rfs.scss" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Include="compilerconfig.json" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\banner.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\build-plugins.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\change-version.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\generate-sri.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\postcss.config.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\rollup.config.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\vnu-jar.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\build\zip-examples.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.rtl.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.rtl.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.rtl.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.rtl.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.rtl.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.rtl.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.rtl.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.rtl.min.css.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.min.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.min.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.min.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.min.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.min.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.min.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\alert.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\alert.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\base-component.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\base-component.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\button.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\button.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\carousel.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\carousel.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\collapse.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\collapse.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\data.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\data.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\event-handler.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\event-handler.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\manipulator.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\manipulator.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\selector-engine.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\selector-engine.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dropdown.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dropdown.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\modal.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\modal.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\offcanvas.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\offcanvas.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\popover.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\popover.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\scrollspy.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\scrollspy.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tab.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tab.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\toast.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\toast.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tooltip.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tooltip.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\backdrop.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\backdrop.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\component-functions.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\component-functions.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\config.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\config.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\focustrap.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\focustrap.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\index.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\index.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\sanitizer.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\sanitizer.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\scrollbar.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\scrollbar.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\swipe.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\swipe.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\template-factory.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\template-factory.js.map" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\index.esm.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\index.umd.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\alert.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\base-component.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\button.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\carousel.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\collapse.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\data.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\event-handler.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\manipulator.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\selector-engine.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dropdown.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\modal.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\offcanvas.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\popover.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\scrollspy.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\tab.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\toast.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\tooltip.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\backdrop.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\component-functions.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\config.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\focustrap.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\index.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\sanitizer.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\scrollbar.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\swipe.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\template-factory.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\browsers.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\helpers\fixture.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\bundle-modularity.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\bundle.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\rollup.bundle-modularity.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\rollup.bundle.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\karma.conf.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\README.md" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\alert.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\base-component.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\button.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\carousel.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\collapse.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\data.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\event-handler.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\manipulator.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\selector-engine.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dropdown.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\jquery.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\modal.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\offcanvas.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\popover.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\scrollspy.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\tab.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\toast.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\tooltip.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\backdrop.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\component-functions.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\config.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\focustrap.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\index.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\sanitizer.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\scrollbar.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\swipe.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\template-factory.spec.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-grid.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-reboot.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-utilities.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_floating-labels.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-check.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-control.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-range.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-select.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-text.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_input-group.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_labels.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_validation.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_clearfix.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_color-bg.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_colored-links.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_focus-ring.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_icon-link.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_position.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_ratio.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stacks.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stretched-link.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_text-truncation.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_visually-hidden.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_vr.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_alert.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_backdrop.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_banner.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_border-radius.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_box-shadow.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_breakpoints.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_buttons.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_caret.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_clearfix.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-mode.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-scheme.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_container.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_deprecate.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_forms.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_gradients.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_grid.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_image.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_list-group.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_lists.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_pagination.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_reset-text.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_resize.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_table-variants.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_text-truncate.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_transition.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_utilities.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_visually-hidden.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\jasmine.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_color-modes.test.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_media-query-color-mode-full.test.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_utilities.test.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\register.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\runner.js" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\utilities\_api.test.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\utilities\_api.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\vendor\_rfs.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_accordion.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_alert.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_badge.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_breadcrumb.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_button-group.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_buttons.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_card.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_carousel.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_close.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_containers.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_dropdown.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_forms.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_functions.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_grid.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_helpers.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_images.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_list-group.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_maps.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_mixins.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_modal.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_nav.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_navbar.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_offcanvas.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_pagination.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_placeholders.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_popover.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_progress.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_reboot.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_root.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_spinners.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_tables.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_toasts.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_tooltip.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_transitions.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_type.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_utilities.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_variables-dark.scss" />
-    <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_variables.scss" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="compilerconfig.json" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\banner.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\build-plugins.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\change-version.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\generate-sri.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\postcss.config.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\rollup.config.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\vnu-jar.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\build\zip-examples.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.rtl.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-grid.rtl.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.rtl.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-reboot.rtl.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.rtl.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap-utilities.rtl.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.rtl.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\css\bootstrap.rtl.min.css.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.min.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.bundle.min.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.min.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.esm.min.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.min.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\dist\js\bootstrap.min.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\alert.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\alert.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\base-component.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\base-component.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\button.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\button.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\carousel.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\carousel.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\collapse.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\collapse.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\data.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\data.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\event-handler.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\event-handler.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\manipulator.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\manipulator.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\selector-engine.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dom\selector-engine.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dropdown.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\dropdown.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\modal.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\modal.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\offcanvas.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\offcanvas.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\popover.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\popover.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\scrollspy.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\scrollspy.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tab.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tab.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\toast.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\toast.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tooltip.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\tooltip.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\backdrop.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\backdrop.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\component-functions.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\component-functions.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\config.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\config.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\focustrap.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\focustrap.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\index.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\index.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\sanitizer.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\sanitizer.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\scrollbar.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\scrollbar.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\swipe.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\swipe.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\template-factory.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\dist\util\template-factory.js.map" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\index.esm.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\index.umd.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\alert.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\base-component.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\button.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\carousel.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\collapse.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\data.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\event-handler.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\manipulator.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dom\selector-engine.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\dropdown.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\modal.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\offcanvas.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\popover.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\scrollspy.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\tab.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\toast.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\tooltip.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\backdrop.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\component-functions.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\config.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\focustrap.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\index.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\sanitizer.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\scrollbar.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\swipe.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\src\util\template-factory.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\browsers.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\helpers\fixture.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\bundle-modularity.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\bundle.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\rollup.bundle-modularity.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\integration\rollup.bundle.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\karma.conf.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\README.md" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\alert.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\base-component.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\button.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\carousel.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\collapse.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\data.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\event-handler.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\manipulator.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dom\selector-engine.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\dropdown.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\jquery.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\modal.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\offcanvas.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\popover.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\scrollspy.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\tab.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\toast.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\tooltip.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\backdrop.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\component-functions.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\config.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\focustrap.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\index.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\sanitizer.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\scrollbar.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\swipe.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\js\tests\unit\util\template-factory.spec.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-grid.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-reboot.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-utilities.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_floating-labels.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-check.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-control.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-range.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-select.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_form-text.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_input-group.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_labels.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\forms\_validation.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_clearfix.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_color-bg.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_colored-links.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_focus-ring.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_icon-link.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_position.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_ratio.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stacks.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_stretched-link.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_text-truncation.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_visually-hidden.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\helpers\_vr.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_alert.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_backdrop.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_banner.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_border-radius.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_box-shadow.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_breakpoints.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_buttons.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_caret.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_clearfix.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-mode.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_color-scheme.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_container.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_deprecate.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_forms.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_gradients.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_grid.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_image.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_list-group.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_lists.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_pagination.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_reset-text.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_resize.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_table-variants.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_text-truncate.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_transition.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_utilities.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\mixins\_visually-hidden.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\jasmine.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_color-modes.test.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_media-query-color-mode-full.test.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\mixins\_utilities.test.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\register.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\sass-true\runner.js" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\tests\utilities\_api.test.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\utilities\_api.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\vendor\_rfs.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_accordion.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_alert.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_badge.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_breadcrumb.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_button-group.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_buttons.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_card.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_carousel.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_close.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_containers.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_dropdown.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_forms.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_functions.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_grid.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_helpers.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_images.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_list-group.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_maps.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_mixins.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_modal.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_nav.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_navbar.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_offcanvas.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_pagination.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_placeholders.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_popover.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_progress.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_reboot.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_root.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_spinners.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_tables.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_toasts.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_tooltip.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_transitions.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_type.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_utilities.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_variables-dark.scss" />
+        <None Include="wwwroot\lib\bootstrap-5.3.1\scss\_variables.scss" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="BuildWebCompiler2022" Version="1.14.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="wwwroot\scss\*\*.*" CopyToPublishDirectory="Never" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ServiceRadar.Application\ServiceRadar.Application.csproj" />
-    <ProjectReference Include="..\ServiceRadar.Infrastructure\ServiceRadar.Infrastructure.csproj" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="BuildWebCompiler2022" Version="1.14.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="wwwroot\img\logo.svg" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ServiceRadar.Application\ServiceRadar.Application.csproj" />
+        <ProjectReference Include="..\ServiceRadar.Infrastructure\ServiceRadar.Infrastructure.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-grid.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-reboot.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-utilities.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_accordion.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_alert.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_badge.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_breadcrumb.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_button-group.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_buttons.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_card.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_carousel.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_close.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_containers.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_dropdown.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_forms.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_functions.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_grid.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_helpers.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_images.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_list-group.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_maps.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_mixins.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_modal.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_nav.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_navbar.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_offcanvas.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_pagination.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_placeholders.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_popover.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_progress.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_reboot.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_root.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_spinners.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_tables.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_toasts.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_tooltip.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_transitions.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_type.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_utilities.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_variables-dark.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_variables.scss">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
+    <ItemGroup>
+        <Folder Include="wwwroot\css\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-grid.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-reboot.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap-utilities.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.css">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.min.css">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\bootstrap.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_accordion.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_alert.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_badge.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_breadcrumb.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_button-group.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_buttons.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_card.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_carousel.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_close.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_containers.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_dropdown.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_forms.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_functions.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_grid.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_helpers.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_images.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_list-group.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_maps.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_mixins.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_modal.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_nav.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_navbar.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_offcanvas.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_pagination.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_placeholders.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_popover.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_progress.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_reboot.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_root.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_spinners.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_tables.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_toasts.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_tooltip.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_transitions.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_type.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_utilities.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_variables-dark.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="wwwroot\lib\bootstrap-5.3.1\scss\_variables.scss">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+    </ItemGroup>
 
 </Project>
